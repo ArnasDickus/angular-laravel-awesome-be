@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Item;
+
+use App\TodoTask;
 use Illuminate\Http\Request;
 
-class ItemController extends Controller
+class TodoTaskController extends Controller
 {
     /**
      * Store a newly created resource in storage.
@@ -14,14 +15,9 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        error_log($request);
-        $item = new Item([
-            'name' => $request->get('name'),
-            'price' => $request->get('price')
+        $item = new TodoTask([
+            'task' => $request->get('task')
         ]);
-
         $item->save();
-        error_log($item);
-        return response()->json('Successfully added');
     }
 }
