@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\TodoTask;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 
 class TodoTaskController extends Controller
 {
@@ -29,5 +30,16 @@ class TodoTaskController extends Controller
             'task' => $request->get('task')
         ]);
         $item->save();
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Redirector
+     */
+    public function destroy($id)
+    {
+       return TodoTask::findOrFail($id)->delete();
     }
 }
