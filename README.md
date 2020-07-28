@@ -1,6 +1,6 @@
 # Angular-Laravel is Awesome
 
-Angular Laavel is awesome is a application that tries to show the power of Angular and Laravel by incomperating more and more difficult tasks.
+Angular Laravel is awesome is a application that tries to show the power of Angular and Laravel by incomperating more and more difficult tasks.
 
 ## Getting Started
 
